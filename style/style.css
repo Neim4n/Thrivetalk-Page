@@ -610,7 +610,7 @@ body.lock {
   background: #0052C1;
 }
 .wrapper .main .services .services__container .services__tiles.tiles-second .tiles-item:nth-child(3) {
-  background: url("/image/tiles_picture.png") center center no-repeat;
+  background: url("../image/tiles_picture.png") center center no-repeat;
   background-size: 110%;
 }
 .wrapper .main .services .services__container .services__tiles.tiles-second .tiles-item:nth-child(4) {
