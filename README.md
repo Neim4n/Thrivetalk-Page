@@ -7,3 +7,5 @@ The site is fully adaptive for different resolutions:
 📱  mobile device.  
 
 ## Design 
+Figma template created by Kshitij Choudhary.   
+➡ https://www.figma.com/file/aHd2rHMrnzDXhowLuIQjIyVQ/ThriveTalk-Landing-Page?node-id=0%3A1
