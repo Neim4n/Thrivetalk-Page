@@ -44,7 +44,8 @@ function buttonHandler(e) {
     }
     if (e.target.closest(".close-button")) {
         e.preventDefault();
-        renderPopUp();
+        e.target.closest(".pop-up__window").classList.add("to-close")
+        setTimeout(() => renderPopUp(), 500);
     }
 }
 
@@ -131,22 +132,30 @@ function animOnScroll(params) {
 }
 
 let menuLinks = document.querySelectorAll(".menu__item");
-let Home = document.querySelector("#Home");
+let sections = document.querySelectorAll("section")
+
+/*let Home = document.querySelector("#Home");
 let About = document.querySelector("#About");
 let Services = document.querySelector("#Services");
-let Blog = document.querySelector("#Blog");
+let Blog = document.querySelector("#Blog");*/
 
 function changeActiveLink() {
-    Array.from(menuLinks).forEach(elem => elem.classList.remove("active"));
-    if (Blog.offsetTop <= pageYOffset + 5) {
-        menuLinks[3].classList.add("active");
-    } else if (Services.offsetTop <= pageYOffset + 5) {
-        menuLinks[2].classList.add("active");
-    } else if (About.offsetTop <= pageYOffset + 5) {
-        menuLinks[1].classList.add("active");
-    } else if (Home.offsetTop <= pageYOffset + 5) {
-        menuLinks[0].classList.add("active");
-    }
+    let current = '';
+    Array.from(sections).forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        //const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+            console.log(current)
+        }
+    })
+    Array.from(menuLinks).forEach(elem => {
+        elem.classList.remove("active");
+        if (elem.classList.contains(current)) {
+            elem.classList.add("active");
+        }
+    });
+
 }
 
 function colorHeader() {
