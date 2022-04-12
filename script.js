@@ -1,3 +1,4 @@
+window.scrollTo(0,0)
 /*=========Burger==============*/
 let body = document.body;
 let wrapper = document.querySelector(".wrapper");
