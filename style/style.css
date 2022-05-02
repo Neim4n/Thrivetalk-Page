@@ -458,7 +458,7 @@ body.lock {
     opacity: 0;
   }
   to {
-    transform: translate(0, 0);
+    transform: translate(0, calc(0px - 200 * (100vw - 480px) / 1440));
     opacity: 1;
   }
 }
@@ -665,6 +665,7 @@ body.lock {
   background: #0052C1;
 }
 .wrapper .main .services .services__container .services__tiles.tiles-second .tiles-item:nth-child(3) {
+  transition: 0s ease-in-out background-position;
   background: url("../image/tiles_picture.png") center center no-repeat;
   background-size: 110%;
 }
@@ -1195,7 +1196,7 @@ body.lock {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   .wrapper .main .services .services__container .services__cards {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
   .wrapper .main .contact .contact__container .contact__item {
     position: relative;
@@ -1259,8 +1260,14 @@ body.lock {
   .wrapper .header .header__container .header__navigation .header__logo {
     display: none;
   }
+  .wrapper .header .header__container .header__navigation .header__button {
+    padding: 15px 25px;
+  }
   .wrapper .main .home .home__container .home__content {
     padding: 150px 30px 77px;
+  }
+  .wrapper .main .home .home__container .home__picture .picture__bubble {
+    top: -200px;
   }
   .wrapper .main .information .information__container .information__content {
     margin: 150px 30px 95px;
